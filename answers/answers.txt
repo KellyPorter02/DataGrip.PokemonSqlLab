@@ -12,9 +12,15 @@ How many pokemon have a secondary type?
 
 Part 3
 What is each pokemon's primary type?
+    select name, primary_type from pokemons;
 What is Rufflet's secondary type?
+    select name, secondary_type  from pokemons where name = 'Rufflet'; // 18
 What are the names of the pokemon that belong to the trainer with trainerID 303?
+    select pokemon_trainer.trainerID, pokemons.name from pokemon_trainer inner join
+    pokemons on pokemon_trainer.pokemon_id = pokemons.id where trainerID = 303;
+    // Wailord, Vileplume
 How many pokemon have a secondary type Poison
+
 What are all the primary types and how many pokemon have that type?
 How many pokemon at level 100 does each trainer with at least one level 100 pokemone have?
 (Hint: your query should not display a trainer
